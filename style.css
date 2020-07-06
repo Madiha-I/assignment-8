@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
+*{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+
+    padding: 0px;
+    margin: 0px;
+
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+body{
+    display: flex;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    background-image: url("bg-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: auto;
+    width: 70%;
+    margin-top: 80px;
+}
+
+.header{
+    display: flex; 
+    background-color: rgb(255, 255, 255, 0.3);
+    padding: 8px 15px;
+    border-radius: 12px;
+    justify-content: space-between;
+    box-shadow: 1px 1px 9px rgba(180, 174, 174, 0.350);
+}
+
+.header > h1{
+    color: #fff;
+    align-self: center;
+    text-shadow: 1px 1px 6px rgba(15, 15, 15, 0.288);
+}
+
+.light, .dark{
+    border-radius: 100%;
+    padding: 15px 17px;
+    border: none;
+    color: #fff;
+    background-color: lightseagreen;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.288);
+}
+
+.watch-container{
+    margin-top: 50px;
+    padding: 25px;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-radius: 25px;
+    box-shadow: 1px 1px 9px rgba(15, 15, 15, 0.200);
+}
+
+.clockface{
+    font-size: 10vw;
+    margin-bottom: 100px;
+}
+
+.min, .sec, .msec{
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(15, 15, 15, 0.288);
+}
+
+.min::after, .sec::after{
+    content: ' :';
+}
+
+.play, .stop, .pause{
+    border-radius: 100%;
+    padding: 23px 25px;
+    margin: 0px 15px;
+    border: none;
+    color: #fff;
+    background-color: lightseagreen;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.288);
+}
+
+.play:hover, .stop:hover, .pause:hover, .light:hover, .dark:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.350);
+}
+
+.play:focus, .stop:focus, .pause:focus{
+    box-shadow: inset 2px 2px 5px rgba(94,104,121,0.288);
+}
+
+.hidden{
+    display: none;
+}
+
+.dark-bg-img{
+    background-image: url("alt-bg-img.jpg");
+}
+
+.dark-bg-color{
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+
+@media only screen and (max-width: 992px) {
+    .container{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .clockface{
+        margin-bottom: 50px;
+    }
+
+    .play, .stop, .pause, .light, .dark{
+        padding: 13px 15px;
+    }
+}
